@@ -1,25 +1,24 @@
 <template>
-  <div class="main-nav">
-    <div>
+  <div class="main-nav p-2">
       <ul class="icons-container">
-        <router-link to="/" exact active-class="active-route"
+        <router-link class="router-link" to="/" exact active-class="active-route"
           ><span class="icon-span">Inicio</span><i class="fas fa-home"></i
         ></router-link>
-        <router-link to="/about" active-class="active-route"
+        <router-link class="router-link" to="/about" active-class="active-route"
           ><span class="icon-span">Sobre mi</span><i class="fas fa-user-alt"></i
         ></router-link>
-        <router-link to="/resume" active-class="active-route"
+        <router-link class="router-link" to="/resume" active-class="active-route"
           ><span class="icon-span">Resumen</span
           ><i class="fas fa-graduation-cap"></i
         ></router-link>
-        <router-link to="/portfolio" active-class="active-route"
+        <router-link class="router-link" to="/portfolio" active-class="active-route"
           ><span class="icon-span">Portafolio</span
           ><i class="fas fa-briefcase"></i
         ></router-link>
-        <router-link to="/blog" active-class="active-route"
+        <router-link class="router-link" to="/blog" active-class="active-route"
           ><span class="icon-span">Blog</span><i class="fas fa-book"></i
         ></router-link>
-        <router-link to="/contact" active-class="active-route"
+        <router-link class="router-link" to="/contact" active-class="active-route"
           ><span class="icon-span">Contacto</span><i class="fas fa-phone"></i
         ></router-link>
         <div class="siguiente" @click="goNext">
@@ -29,7 +28,7 @@
           <i class="fas fa-chevron-circle-left"></i>
         </div>
       </ul>
-    </div>
+    
   </div>
 </template>
 <script>
@@ -75,28 +74,23 @@ export default {
 </script>
 <style scoped>
 .main-nav {
-  margin-left: 1rem;
-  padding-right: 15px;
-  width: 6rem;
-  background: var(--primay);
-  height: 80%;
+  background: var(--primary);
   border-radius: 50px;
 }
-.main-nav > div {
-  height: 100%;
-}
-.main-nav > div > ul {
+
+.main-nav> ul {
   list-style: none;
-  height: inherit;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  align-items: start;
+  justify-content:space-around;
+  align-items: center;
   color: var(--text-theme);
 }
 .icons-container {
   margin: 0;
   font-size: 2rem;
+  height: 100%;
 }
 .icons-container > * {
   color: var(--text-theme);
@@ -120,4 +114,32 @@ export default {
 .icons-container > *:hover > .icon-span {
   visibility: visible;
 }
+@media only screen and (max-width: 765px) {
+  .main-nav{
+    border-radius:0;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    order: 2;
+
+  }
+ .main-nav>ul{
+    flex-direction: row;
+    padding: 0rem;
+ }
+ .icon-span{
+  position: fixed;
+  top: 0;
+  right: 0;
+  border-radius: 0;
+   width: 100vw;
+   padding: 0.8rem;
+   
+ }
+ .siguiente{
+   order: 2;
+ }
+
+}
+
 </style>
