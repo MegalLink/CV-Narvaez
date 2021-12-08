@@ -42,6 +42,7 @@ export default {
   justify-content: space-around;
   
 }
+
 .social-icons>a{
   cursor: pointer;
   text-align: center;
@@ -50,8 +51,10 @@ export default {
   border-radius: 100px;
   transition: 0.5s ease-in background;
 }
+
 .social-icons>a:hover {
   
   background-color: var(--secondary);
 }
+
 </style>

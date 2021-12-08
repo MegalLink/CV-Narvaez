@@ -42,8 +42,6 @@ export default {
 </script>
 <style scoped>
 .container {
-  
-  
   color: var(--text-primary);
   display: flex;
   flex-direction: column;

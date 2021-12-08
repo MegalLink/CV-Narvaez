@@ -1,4 +1,5 @@
 <template>
+<particles-bg type="cobweb" num=200 color="#ffffff" :canvas="{backgroundColor:'#0A2239'}" :bg="true"/>
   <div class="main-container">
     <Profile />
     <div class="main-container_container">
@@ -9,13 +10,16 @@
 </template>
 
 <script>
+//"color""lines""thick""circle""cobweb""tadpole""fountain""random""custom"
 import Nav from "./components/Nav";
 import Profile from "./components/Profile";
+import { ParticlesBg } from "particles-bg-vue";
 export default {
   name: "App",
-  components: { Nav, Profile },
+  components: { Nav, Profile,ParticlesBg },
 };
 </script>
+
 <style>
 * {
   margin: 0;
@@ -31,17 +35,6 @@ export default {
   justify-content: center;
   width: 100vw;
   height: 100vh;
-  background: #bdc3c7; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #2c3e50,
-    #bdc3c7
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #2c3e50,
-    #bdc3c7
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   align-items: center;
 }
 .container{

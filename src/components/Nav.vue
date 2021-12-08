@@ -12,14 +12,8 @@
           ><i class="fas fa-graduation-cap"></i
         ></router-link>
         <router-link class="router-link" to="/portfolio" active-class="active-route"
-          ><span class="icon-span">Portafolio</span
+          ><span class="icon-span">Certificados</span
           ><i class="fas fa-briefcase"></i
-        ></router-link>
-        <router-link class="router-link" to="/blog" active-class="active-route"
-          ><span class="icon-span">Blog</span><i class="fas fa-book"></i
-        ></router-link>
-        <router-link class="router-link" to="/contact" active-class="active-route"
-          ><span class="icon-span">Contacto</span><i class="fas fa-phone"></i
         ></router-link>
         <div class="siguiente" @click="goNext">
           <i class="fas fa-chevron-circle-right"></i>
@@ -104,7 +98,7 @@ export default {
 .icon-span {
   position: absolute;
   font-size: 20px;
-  right: 10%;
+  right: 5%;
   background: var(--secondary);
   color: var(--text-theme);
   padding: 8px;
